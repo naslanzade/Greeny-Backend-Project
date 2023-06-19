@@ -26,6 +26,9 @@ namespace Greeny.Controllers
             Text text=await _context.Texts.Where(m=>!m.SoftDeleted).FirstOrDefaultAsync();
             List<Milestone> milestones= await _context.Milestones.Where(m => !m.SoftDeleted).ToListAsync();
             List<Team> teams=await _context.Teams.Where(m=>!m.SoftDeleted).Include(m=>m.Position).ToListAsync();
+            List<Testimonial> testimonials=await _context.Testimonials.Where(m => !m.SoftDeleted).Include(m => m.Position).ToListAsync();
+            BgImage bgImage = await _context.BgImages.Where(m => !m.SoftDeleted).FirstOrDefaultAsync(); 
+
 
 
             AboutVM aboutVM = new()
@@ -33,7 +36,9 @@ namespace Greeny.Controllers
                 Images=images,
                 Milestones=milestones,
                 Texts=text,
-                Teams=teams 
+                Teams=teams,
+                Testimonials=testimonials,
+                BgImage=bgImage
             };
 
             return View(aboutVM);

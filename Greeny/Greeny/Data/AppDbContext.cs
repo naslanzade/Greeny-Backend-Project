@@ -24,11 +24,10 @@ namespace Greeny.Data
         public DbSet<AboutImage> AboutImages { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Team> Teams { get; set; }
-
-
-
-
-
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<BgImage> BgImages { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Branch> Branches { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

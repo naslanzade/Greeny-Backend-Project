@@ -49,7 +49,7 @@
                 <ul class="header-top-list">
                     <li><a href="offer.html">offers</a></li>
                     <li><a href="faq.html">need help</a></li>
-                    <li><a href="contact.html">contact us</a></li>
+                    <li><a asp-controller="Contact" asp-action="Index">contact us</a></li>
                 </ul>
             </div>
         </div>
@@ -248,7 +248,7 @@
                         </li>
                         <li class="navbar-item dropdown">
                             <a class="navbar-link "
-                               href="#">contact us</a>
+                               asp-controller="Contact" asp-action="Index">contact us</a>
 
                         </li>
                         <li class="navbar-item dropdown">
