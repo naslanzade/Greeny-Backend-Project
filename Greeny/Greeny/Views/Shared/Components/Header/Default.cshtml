@@ -3,6 +3,20 @@
     ViewData["Title"] = "Default";
 }
 
+
+<style>
+
+    .profile{
+        text-decoration:none;
+        color:black;
+    }
+
+    .profile:hover{
+        color:black;
+    }
+</style>
+
+
 <div class="backdrop"></div>
 <a class="backtop fas fa-arrow-up" href="#"></a>
 <div class="header-top">
@@ -51,9 +65,19 @@
                 </button><a href="index.html"><img src="~/images/logo.png" alt="logo"></a><button class="header-src">
                     <i class="fas fa-search"></i>
                 </button>
-            </div><a href="index.html"
-                     class="header-logo"><img src="~/images/@Model.SettingDatas["logo"]" alt="logo"></a><a href="login.html"
-                                                                                        class="header-widget" title="My Account"><img src="~/images/user.png" alt="user"><span>join</span></a>
+            </div><a asp-controller="Home" asp-action="Index"
+                     class="header-logo"><img src="~/images/@Model.SettingDatas["logo"]" alt="logo"></a>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="profile" asp-controller="Profile" asp-action="Index">Profile</a>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="SignIn"
+                   class="header-widget" title="My Account"><img src="~/images/user.png" alt="user"><span>join</span></a>
+            }
+
             <form class="header-form">
                 <input type="text" placeholder="Search anything..."><button>
                     <i class="fas fa-search"></i>
@@ -80,7 +104,7 @@
                 <div class="navbar-content">
                     <ul class="navbar-list">
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="#">home</a>
+                            <a class="navbar-link" asp-controller="Home" asp-action="Index">home</a>
 
                         </li>
                         <li class="navbar-item dropdown-megamenu">
@@ -219,7 +243,7 @@
                             </div>
                         </li>
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="#">about us</a>
+                            <a class="navbar-link" asp-controller="About" asp-action="Index">about us</a>
 
                         </li>
                         <li class="navbar-item dropdown">

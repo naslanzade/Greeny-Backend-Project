@@ -19,6 +19,11 @@ namespace Greeny.Data
         public DbSet<Setting> Settings { get; set;}
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<SliderInfo> SliderInfos { get; set; }
+        public DbSet<Text> Texts { get; set; }
+        public DbSet<Milestone> Milestones { get; set; }
+        public DbSet<AboutImage> AboutImages { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Team> Teams { get; set; }
 
 
 

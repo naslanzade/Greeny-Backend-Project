@@ -25,10 +25,7 @@ namespace Greeny.Controllers
 
             HomeVM homeVM = new()
             {
-
-
               Sliders = slider,
-
 
             };
 

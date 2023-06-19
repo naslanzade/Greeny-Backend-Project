@@ -1,4 +1,5 @@
 using Greeny.Data;
+using Greeny.Helpers;
 using Greeny.Models;
 using Greeny.Services;
 using Greeny.Services.Interface;
@@ -37,9 +38,12 @@ builder.Services.Configure<IdentityOptions>(opt =>
 });
 
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 
 builder.Services.AddScoped<ILayoutService, LayoutService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<EmailSettings>();
 
 
 var app = builder.Build();
@@ -60,6 +64,11 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+name: "areas",
+pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}");
+
 
 app.MapControllerRoute(
     name: "default",

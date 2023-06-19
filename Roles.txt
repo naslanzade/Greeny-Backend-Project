@@ -1,0 +1,11 @@
+SuperAdmin:
+FullName: Novrasta Aslanzade
+UserName:Nana
+Password:Nana123_
+
+Admin:
+FullName:Ismat Aslanov
+UserName:Ismat
+Password:Nana123_
+
+Other users are member.
