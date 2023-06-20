@@ -1,4 +1,6 @@
-﻿namespace Greeny.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Greeny.Models
 {
     public class Product :BaseEntity
     {
@@ -9,8 +11,10 @@
         public int SaleCount { get; set; }
         public int RateCount { get; set; }
         public int ProductCount { get; set; }
-        public int CategoryId { get; set; }
+        public int CategoryId { get; set; }       
         public Category Category { get; set; }
+
+        [ForeignKey("SubCategory")]
         public int SubCategoryId { get; set; }
         public SubCategory SubCategory { get; set; }
         public int DiscountId { get; set; }

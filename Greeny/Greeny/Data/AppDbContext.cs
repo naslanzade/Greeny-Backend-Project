@@ -50,6 +50,11 @@ namespace Greeny.Data
             modelBuilder.Entity<Branch>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
 
+            modelBuilder.Entity<SubCategory>()
+                        .HasMany(e => e.Product)
+                        .WithOne(e => e.SubCategory)
+                        .OnDelete(DeleteBehavior.Restrict);
+
 
 
         }
