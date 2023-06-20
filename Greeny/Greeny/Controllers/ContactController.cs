@@ -1,5 +1,6 @@
 ﻿using Greeny.Data;
 using Greeny.Models;
+using Greeny.Services.Interface;
 using Greeny.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,22 +9,26 @@ namespace Greeny.Controllers
 {
     public class ContactController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IBgImageService _imageService;
+        private readonly IBranchService _branchService;
 
-        public ContactController(AppDbContext context)
+        public ContactController(IBgImageService bgImageService,IBranchService branchService)
         {
-            _context = context;
+            
+            _imageService = bgImageService;
+            _branchService = branchService;
         }
+
+
 
         public async Task<IActionResult> Index()
         {
-            List<Branch> branches=await _context.Branches.Where(m=>!m.SoftDeleted).Include(m=>m.Country).ToListAsync();
-            BgImage bgImage = await _context.BgImages.Where(m => !m.SoftDeleted).FirstOrDefaultAsync();
+            
 
             ContactVM contactVM = new()
             {
-                BgImage=bgImage,
-                Branch=branches
+                BgImage= await _imageService.GetAllAsync(),
+                Branch= await _branchService.GetAllAsync()
 
             };
 

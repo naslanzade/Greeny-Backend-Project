@@ -44,6 +44,14 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<EmailSettings>();
+builder.Services.AddScoped<IAboutImageService, AboutImageService>();
+builder.Services.AddScoped<IMilestoneService, MilestoneService>();
+builder.Services.AddScoped<ITextService, TextService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+builder.Services.AddScoped<IBgImageService, BgImageService>();
+builder.Services.AddScoped<IBranchService, BranchService>();
+builder.Services.AddScoped<ISliderService, SliderService>();
 
 
 var app = builder.Build();

@@ -1,6 +1,7 @@
 ﻿
 using Greeny.Data;
 using Greeny.Models;
+using Greeny.Services.Interface;
 using Greeny.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,19 +14,21 @@ namespace Greeny.Controllers
     public class HomeController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ISliderService _sliderService;
 
-        public HomeController(AppDbContext context)
+        public HomeController(AppDbContext context,
+                              ISliderService sliderService)
         {
             _context = context;
+            _sliderService = sliderService;
         }
 
         public async Task<IActionResult> Index()
         {
-            List<Slider> slider=await _context.Sliders.Where(m=>!m.SoftDeleted).ToListAsync();
-
+            
             HomeVM homeVM = new()
             {
-              Sliders = slider,
+              Sliders = await _sliderService.GetAllAsync(),
 
             };
 

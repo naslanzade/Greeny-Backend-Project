@@ -4,6 +4,7 @@ using Greeny.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Greeny.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230620104634_CreateCategoryAndSubCategoryTables")]
+    partial class CreateCategoryAndSubCategoryTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,7 +44,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutImages", (string)null);
+                    b.ToTable("AboutImages");
                 });
 
             modelBuilder.Entity("Greeny.Models.AppUser", b =>
@@ -134,7 +136,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BgImages", (string)null);
+                    b.ToTable("BgImages");
                 });
 
             modelBuilder.Entity("Greeny.Models.Branch", b =>
@@ -170,30 +172,7 @@ namespace Greeny.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Branches", (string)null);
-                });
-
-            modelBuilder.Entity("Greeny.Models.Brand", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Branches");
                 });
 
             modelBuilder.Entity("Greeny.Models.Category", b =>
@@ -220,7 +199,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Greeny.Models.Country", b =>
@@ -243,33 +222,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries", (string)null);
-                });
-
-            modelBuilder.Entity("Greeny.Models.Disocunt", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<byte>("Discount")
-                        .HasColumnType("tinyint");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Disocunts", (string)null);
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Greeny.Models.Milestone", b =>
@@ -294,7 +247,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Milestones", (string)null);
+                    b.ToTable("Milestones");
                 });
 
             modelBuilder.Entity("Greeny.Models.Position", b =>
@@ -317,7 +270,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions", (string)null);
+                    b.ToTable("Positions");
                 });
 
             modelBuilder.Entity("Greeny.Models.Setting", b =>
@@ -336,7 +289,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings", (string)null);
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("Greeny.Models.Slider", b =>
@@ -367,7 +320,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders", (string)null);
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("Greeny.Models.SliderInfo", b =>
@@ -394,7 +347,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SliderInfos", (string)null);
+                    b.ToTable("SliderInfos");
                 });
 
             modelBuilder.Entity("Greeny.Models.SubCategory", b =>
@@ -422,7 +375,7 @@ namespace Greeny.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("SubCategories", (string)null);
+                    b.ToTable("SubCategories");
                 });
 
             modelBuilder.Entity("Greeny.Models.Team", b =>
@@ -454,7 +407,7 @@ namespace Greeny.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Teams", (string)null);
+                    b.ToTable("Teams");
                 });
 
             modelBuilder.Entity("Greeny.Models.Testimonial", b =>
@@ -490,7 +443,7 @@ namespace Greeny.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Testimonials", (string)null);
+                    b.ToTable("Testimonials");
                 });
 
             modelBuilder.Entity("Greeny.Models.Text", b =>
@@ -517,7 +470,7 @@ namespace Greeny.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Texts", (string)null);
+                    b.ToTable("Texts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
