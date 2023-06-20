@@ -52,6 +52,10 @@ builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 builder.Services.AddScoped<IBgImageService, BgImageService>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddScoped<IAdvertService, AdvertService>();
 
 
 var app = builder.Build();

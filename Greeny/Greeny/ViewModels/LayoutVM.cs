@@ -1,4 +1,6 @@
-﻿namespace Greeny.ViewModels
+﻿using Greeny.Models;
+
+namespace Greeny.ViewModels
 {
     public class LayoutVM
     {
@@ -6,5 +8,6 @@
         public int BasketCount { get; set; }
         public int WishList { get; set; }
         public Dictionary<string, string> SettingDatas { get; set; }
+       
     }
 }

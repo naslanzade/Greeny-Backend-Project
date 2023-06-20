@@ -36,6 +36,7 @@ namespace Greeny.Data
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
+        public DbSet<Advert> Adverts { get; set; }
 
 
 
@@ -49,6 +50,11 @@ namespace Greeny.Data
             modelBuilder.Entity<BgImage>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Branch>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<SubCategory>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Advert>().HasQueryFilter(m => !m.SoftDeleted);
+
 
             modelBuilder.Entity<SubCategory>()
                         .HasMany(e => e.Product)

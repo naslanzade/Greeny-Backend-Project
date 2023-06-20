@@ -7321,6 +7321,74 @@
       "PackagePath": "staticwebassets\\images\\brand\\06.jpg"
     },
     {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\07.png",
+      "PackagePath": "staticwebassets\\images\\brand\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\09.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\09.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\10.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\10.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\11.png",
+      "PackagePath": "staticwebassets\\images\\brand\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\12.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\12.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\13.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\13.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\14.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\14.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\15.png",
+      "PackagePath": "staticwebassets\\images\\brand\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\16.png",
+      "PackagePath": "staticwebassets\\images\\brand\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\17.png",
+      "PackagePath": "staticwebassets\\images\\brand\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\18.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\18.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\19.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\19.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\20.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\20.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\21.png",
+      "PackagePath": "staticwebassets\\images\\brand\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\22.png",
+      "PackagePath": "staticwebassets\\images\\brand\\22.png"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\23.jpeg",
+      "PackagePath": "staticwebassets\\images\\brand\\23.jpeg"
+    },
+    {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\category\\dairy.jpg",
       "PackagePath": "staticwebassets\\images\\category\\dairy.jpg"
     },

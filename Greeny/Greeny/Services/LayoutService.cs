@@ -1,6 +1,7 @@
 ﻿using Greeny.Data;
 using Greeny.Services.Interface;
 using Greeny.ViewModels;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace Greeny.Services
 {
@@ -8,16 +9,17 @@ namespace Greeny.Services
     {
 
         private readonly AppDbContext _context;
+        
 
         public LayoutService(AppDbContext context)
         {
             _context = context;
+            
         }
         public async Task<LayoutVM> GetAllDatas()
         {
             var datas=_context.Settings.AsEnumerable().ToDictionary(m=>m.Key,m=>m.Value);
-
-            return new LayoutVM { SettingDatas = datas };
+           return new LayoutVM { SettingDatas = datas };
         }
     }
 }

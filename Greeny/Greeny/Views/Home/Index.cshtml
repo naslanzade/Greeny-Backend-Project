@@ -61,30 +61,12 @@
     <section class="section suggest-part">
         <div class="container">
             <ul class="suggest-slider slider-arrow">
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/01.jpg" alt="suggest">
-                        <h5>vegetables <span>34 items</span></h5>
+                @foreach (var item in Model.Categories)
+            {
+                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/@item.Image" alt="suggest">
+                        <h5>@item.Name</h5>
                     </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/02.jpg" alt="suggest">
-                        <h5>fruits <span>89 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/03.jpg" alt="suggest">
-                        <h5>groceries <span>45 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/04.jpg" alt="suggest">
-                        <h5>dairy farm <span>83 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/05.jpg" alt="suggest">
-                        <h5>sea foods <span>40 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/06.jpg" alt="suggest">
-                        <h5>vegan foods <span>57 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/07.jpg" alt="suggest">
-                        <h5>dry foods <span>23 items</span></h5>
-                    </a></li>
-                <li><a class="suggest-card" href="shop-4column.html"><img src="~/images/suggest/08.jpg" alt="suggest">
-                        <h5>fast foods <span>97 items</span></h5>
-                    </a></li>
+            }     
             </ul>
         </div>
     </section>
@@ -402,7 +384,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="promo-img"><a href="#"><img src="~/images/promo/home/03.jpg" alt="promo"></a></div>
+                    <div class="promo-img"><a href="#"><img src="~/images/promo/home/@Model.Advert.Name" alt="promo"></a></div>
                 </div>
             </div>
         </div>
@@ -844,12 +826,12 @@
     <div class="section promo-part">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
-                    <div class="promo-img"><a href="#"><img src="~/images/promo/home/01.jpg" alt="promo"></a></div>
+                @foreach (var item in Model.Adverts)
+            {
+                 <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
+                    <div class="promo-img"><a href="#"><img src="~/images/promo/home/@item.Name" alt="promo"></a></div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
-                    <div class="promo-img"><a href="#"><img src="~/images/promo/home/02.jpg" alt="promo"></a></div>
-                </div>
+            }            
             </div>
         </div>
     </div>
@@ -1834,64 +1816,23 @@
                 </div>
             </div>
             <div class="brand-slider slider-arrow">
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/01.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
+                @foreach (var item in Model.Brands)
+            {
+                 <div class="brand-wrap">
+                    <div class="brand-media"><img src="~/images/brand/@item.Image" alt="brand">
+                        <div class="brand-overlay"><a href=""><i class="fas fa-link"></i></a></div>
                     </div>
                     <div class="brand-meta">
-                        <h4>natural greeny</h4>
-                        <p>(45 items)</p>
+                        <h4>@item.Name</h4>
+                       
                     </div>
                 </div>
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/02.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
-                    </div>
-                    <div class="brand-meta">
-                        <h4>vegan lover</h4>
-                        <p>(45 items)</p>
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/03.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
-                    </div>
-                    <div class="brand-meta">
-                        <h4>organic foody</h4>
-                        <p>(45 items)</p>
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/04.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
-                    </div>
-                    <div class="brand-meta">
-                        <h4>ecomart limited</h4>
-                        <p>(45 items)</p>
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/05.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
-                    </div>
-                    <div class="brand-meta">
-                        <h4>fresh fortune</h4>
-                        <p>(45 items)</p>
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media"><img src="~/images/brand/06.jpg" alt="brand">
-                        <div class="brand-overlay"><a href="brand-single.html"><i class="fas fa-link"></i></a></div>
-                    </div>
-                    <div class="brand-meta">
-                        <h4>econature</h4>
-                        <p>(45 items)</p>
-                    </div>
-                </div>
+            }              
+            
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-btn-50"><a href="brand-list.html" class="btn btn-outline"><i
+                    <div class="section-btn-50"><a asp-controller="Brand" asp-action="Index" class="btn btn-outline"><i
                                 class="fas fa-eye"></i><span>view all brands</span></a></div>
                 </div>
             </div>
