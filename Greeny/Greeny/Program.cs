@@ -56,6 +56,9 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 
 
 var app = builder.Build();

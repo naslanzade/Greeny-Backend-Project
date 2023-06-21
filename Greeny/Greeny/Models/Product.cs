@@ -22,7 +22,7 @@ namespace Greeny.Models
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
         public int SkuCode { get; set; }
-        public ICollection<ProductImage> Image { get; set; }
+        public ICollection<ProductImage> Images { get; set; }
         public ICollection<ProductTag> ProductTags { get; set; }
 
     }

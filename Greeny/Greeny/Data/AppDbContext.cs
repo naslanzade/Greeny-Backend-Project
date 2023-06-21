@@ -11,11 +11,6 @@ namespace Greeny.Data
         {
 
         }
-
-
-
-
-
         public DbSet<Setting> Settings { get; set;}
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<SliderInfo> SliderInfos { get; set; }
@@ -54,6 +49,12 @@ namespace Greeny.Data
             modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<SubCategory>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Advert>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Product>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Tag>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<SubCategory>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
+
 
 
             modelBuilder.Entity<SubCategory>()

@@ -33,8 +33,7 @@ namespace Greeny.Services
             foreach (var brand in brands)
             {
                 list.Add(new BrandVM
-                {
-                    
+                {                    
                     Name = brand.Name,                  
                     Image = brand.Image,
 
