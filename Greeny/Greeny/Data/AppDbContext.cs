@@ -32,6 +32,10 @@ namespace Greeny.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Advert> Adverts { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketProduct> BasketProducts { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
 
 
 
@@ -54,6 +58,8 @@ namespace Greeny.Data
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<SubCategory>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Blog>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Author>().HasQueryFilter(m => !m.SoftDeleted);
 
 
 

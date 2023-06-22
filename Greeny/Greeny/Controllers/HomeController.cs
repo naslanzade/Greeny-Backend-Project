@@ -19,13 +19,15 @@ namespace Greeny.Controllers
         private readonly IBrandService _brandService;
         private readonly IAdvertService _advertService;
         private readonly IProductService _productService;
+        private readonly IBlogService _blogService;
 
         public HomeController(AppDbContext context,
                               ISliderService sliderService,
                               ICategoryService categoryService,
                               IBrandService brandService,
                               IAdvertService advertService,
-                              IProductService productService)
+                              IProductService productService,
+                              IBlogService blogService)
         {
             _context = context;
             _sliderService = sliderService;
@@ -33,6 +35,7 @@ namespace Greeny.Controllers
             _brandService = brandService;
             _advertService = advertService;
             _productService = productService;
+            _blogService = blogService;
         }
 
         public async Task<IActionResult> Index()
@@ -57,6 +60,7 @@ namespace Greeny.Controllers
                 ProductByDate=await _productService.GetNewProductsAsync(),
                 ProductByRate=await _productService.GetProductsByRatingAsync(),
                 ProductBySale=await _productService.GetProductsBySaleAsync(),
+                BlogsByDate=await _blogService.GetAllAsync(),
 
             };
 

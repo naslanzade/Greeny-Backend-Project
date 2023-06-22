@@ -6,9 +6,14 @@
     <div class="col">
         <div class="feature-card">
             <div class="feature-media">
-                <div class="feature-label"><label class="label-text feat">feature</label></div><button class="feature-wish wish">
-                    <i class="fas fa-heart"></i>
-                </button><a class="feature-image"
+                <div class="feature-label"><label class="label-text feat">feature</label></div>
+               <form id="wishlist-form" data-id="@product.Id">
+                                        <button type="submit" class="product-wish wish">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </form>
+                
+                <a class="feature-image"
                             href="product-video.html"><img src="~/images/product/@product.Images?.Where(m=>m.IsMain).FirstOrDefault()?.Image" alt="product"></a>
                 <div class="feature-widget">
                     <a title="Product Compare" href="compare.html"
@@ -24,9 +29,13 @@
                     <i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="icofont-star"></i><a href="product-video.html">(3 Reviews)</a>
                 </div>
                 <h6 class="feature-price"><del>$@product.Price</del><span><small>/piece</small></span></h6>
-                <p class="feature-desc">@product.Description</p><button class="product-add" title="Add to Cart">
-                    <i class="fas fa-shopping-basket"></i><span>add</span>
-                </button>
+                <p class="feature-desc">@product.Description</p>
+
+                <form id="basket-form" data-id="@product.Id">
+                    <button type="submit" class="product-add" title="Add to Cart">
+                        <i class="fas fa-shopping-basket"></i><span>add</span>
+                    </button>
+                </form>
                 <div class="product-action">
                     <button class="action-minus" title="Quantity Minus">
                         <i class="icofont-minus"></i>

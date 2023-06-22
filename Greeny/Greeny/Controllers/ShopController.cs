@@ -1,45 +1,70 @@
 ﻿using Fiorello.Helpers;
-using Greeny.Models;
 using Greeny.Services.Interface;
 using Greeny.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+
+
 
 namespace Greeny.Controllers
 {
     public class ShopController : Controller
     {
 
-        private readonly IProductService _productService;
-        private readonly IBrandService _brandService;
-        private readonly ITagService _tagService;
-        private readonly ICategoryService _categoryService;
-        private readonly ISubCategoryService _subCategoryService;
-        private readonly IBgImageService _bgImageService;
+        private readonly IProductService _productService;        
+        private readonly ISettingService _settingService;
 
         public ShopController(IProductService productService,
-                              IBrandService brandService,
-                              ITagService tagService,
-                              ICategoryService categoryService,
-                              ISubCategoryService subCategoryService,
-                              IBgImageService bgImageService)
+                             ISettingService settingService)
         {
-            _productService = productService;
-            _brandService = brandService;
-            _tagService = tagService;
-            _categoryService = categoryService;
-            _subCategoryService = subCategoryService;
-            _bgImageService = bgImageService;
+            _productService = productService;         
+            _settingService = settingService;
+        }
+
+        public async Task<IActionResult> Index(int page=1)
+        {
+            var settingDatas = _settingService.GetAll();
+            int take = int.Parse(settingDatas["ShopPagination"]);
+
+            var paginatedDatas = await _productService.GetPaginatedDatasAsync(page, take);
+
+            int pageCount = await GetCountAsync(take);
+
+            if (page > pageCount)
+            {
+                return NotFound();
+            }
+
+            List<ProductVM> mappedDatas = _productService.GetMappedDatas(paginatedDatas);
+
+            Paginate<ProductVM> result = new(mappedDatas, page, pageCount);
+
+            return View(result);
+        }
+
+
+        private async Task<int> GetCountAsync(int take)
+        {
+            int count = await _productService.GetCountAsync();
+            decimal result = Math.Ceiling((decimal)count / take);
+
+            return (int)result;
 
         }
 
-        public async Task<IActionResult> Index()
-        {           
 
-            return View();
+        public async Task<IActionResult> Search(string searchText)
+        {
+            if (string.IsNullOrEmpty(searchText))
+            {
+                return Ok();
+            }
+            var products = await _productService.GetAllBySearchText(searchText);
+
+            return View(products);
         }
 
 
 
-        
+
     }
 }

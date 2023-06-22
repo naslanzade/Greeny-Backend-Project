@@ -24,6 +24,7 @@ namespace Greeny.Models
         public int SkuCode { get; set; }
         public ICollection<ProductImage> Images { get; set; }
         public ICollection<ProductTag> ProductTags { get; set; }
+        public ICollection<BasketProduct> BasketProducts { get; set; }
 
     }
 }

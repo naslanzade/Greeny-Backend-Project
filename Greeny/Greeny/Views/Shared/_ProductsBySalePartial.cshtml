@@ -7,9 +7,15 @@
     <li>
         <div class="product-card">
             <div class="product-media">
-                <div class="product-label"><label class="label-text new">new</label></div><button class="product-wish wish">
-                    <i class="fas fa-heart"></i>
-                </button><a class="product-image" href="product-video.html">
+                <div class="product-label"><label class="label-text new">new</label></div>
+                
+             <form id="wishlist-form" data-id="@product.Id">
+                                        <button type="submit" class="product-wish wish">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </form>
+               
+                <a class="product-image" href="product-video.html">
                     <img src="~/images/product/@product.Images?.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                          alt="product">
                 </a>
@@ -28,9 +34,13 @@
                 </div>
                 <h6 class="product-name"><a asp-controller="Product" asp-action="Index" asp-route-id="@product.Id">@product.Name</a></h6>
                 <h6 class="product-price"><del>$@product.Price</del><span><small>/piece</small></span></h6>
-                <button class="product-add" title="Add to Cart">
-                    <i class="fas fa-shopping-basket"></i><span>add</span>
-                </button>
+
+                <form id="basket-form" data-id="@product.Id">
+                    <button type="submit" class="product-add" title="Add to Cart">
+                        <i class="fas fa-shopping-basket"></i><span>add</span>
+                    </button>
+                </form>
+
                 <div class="product-action">
                     <button class="action-minus" title="Quantity Minus">
                         <i class="icofont-minus"></i>

@@ -13,6 +13,8 @@ namespace Greeny.ViewModels
         public IEnumerable<Product> ProductByRate { get; set; }
         public IEnumerable<Product> ProductBySale { get; set; }
 
+        public IEnumerable<Blog> BlogsByDate { get; set; }
+
 
 
     }

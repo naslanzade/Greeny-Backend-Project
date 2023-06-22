@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PCZDZ02r6P1XB3HBsRGBIBG7+iliOgZFLKbtnZIkmCQ=",
+  "Hash": "Jxv3JlCtKuwIape+btnXALD+x6aC709YTfZ92H2rPz4=",
   "Source": "Greeny",
   "BasePath": "_content/Greeny",
   "Mode": "Default",
@@ -33677,6 +33677,23 @@
       "OriginalItemSpec": "wwwroot\\js\\accordion.js"
     },
     {
+      "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\basket.js",
+      "SourceId": "Greeny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\",
+      "BasePath": "_content/Greeny",
+      "RelativePath": "js/basket.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\basket.js"
+    },
+    {
       "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\countdown.js",
       "SourceId": "Greeny",
       "SourceType": "Discovered",
@@ -33794,6 +33811,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\venobox.js"
+    },
+    {
+      "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\wishlist.js",
+      "SourceId": "Greeny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\",
+      "BasePath": "_content/Greeny",
+      "RelativePath": "js/wishlist.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\wishlist.js"
     },
     {
       "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

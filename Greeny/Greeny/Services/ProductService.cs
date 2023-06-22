@@ -2,10 +2,8 @@
 using Greeny.Models;
 using Greeny.Services.Interface;
 using Greeny.ViewModels;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using static Org.BouncyCastle.Asn1.Cmp.Challenge;
+
 
 namespace Greeny.Services
 {
@@ -85,9 +83,11 @@ namespace Greeny.Services
         }
 
 
-        public Task<List<Product>> GetPaginatedDatasAsync(int page, int take)
+        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take)
         {
-            throw new NotImplementedException();
+            return await _context.Products.Skip((page - 1) * take)
+                                          .Take(take)
+                                          .ToListAsync();
         }
 
         public async Task<int> GetCountAsync()
@@ -95,16 +95,21 @@ namespace Greeny.Services
             return await _context.Products.CountAsync();
         }
 
-        public List<ShopVM> GetMappedDatas(List<Product> products)
+        public List<ProductVM> GetMappedDatas(List<Product> products)
         {
-            List<ShopVM> list = new();
+            List<ProductVM> list = new();
+
             foreach (var product in products)
             {
-                list.Add(new ShopVM
+                list.Add(new ProductVM
                 {
                  
-                 
-
+                    Id = product.Id,
+                    Name = product.Name,
+                    Description = product.Description,
+                    Price=product.Price,
+                    Image =product.Images?.Where(m=>m.IsMain).FirstOrDefault()?.Image,
+                    Products= _context.Products.Include(m=>m.Images).ToList(),
 
                 });
 
@@ -113,5 +118,23 @@ namespace Greeny.Services
             return list;
         }
 
+        public async Task<List<Product>> GetAllBySearchText(string searchText)
+        {
+            var products = await _context.Products.Include(p => p.Images)
+                                                  .OrderByDescending(p => p.Id)
+                                                  .Where(p => p.Name.ToLower().Contains(searchText.ToLower()))
+                                                  .ToListAsync();
+            return products;
+        }
+
+        public async Task<Product> GetByIdAsnyc(int? id)
+        {
+            return await _context.Products.FindAsync(id);
+        }
+
+        public async Task<Product> GetByIdWithImageAsnyc(int? id)
+        {
+            return await _context.Products.Include(m => m.Images).FirstOrDefaultAsync(m => m.Id == id);
+        }
     }
 }

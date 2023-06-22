@@ -7917,6 +7917,10 @@
       "PackagePath": "staticwebassets\\js\\accordion.js"
     },
     {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\basket.js",
+      "PackagePath": "staticwebassets\\js\\basket.js"
+    },
+    {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\countdown.js",
       "PackagePath": "staticwebassets\\js\\countdown.js"
     },
@@ -7943,6 +7947,10 @@
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\venobox.js",
       "PackagePath": "staticwebassets\\js\\venobox.js"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\js\\wishlist.js",
+      "PackagePath": "staticwebassets\\js\\wishlist.js"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\lib\\bootstrap\\LICENSE",

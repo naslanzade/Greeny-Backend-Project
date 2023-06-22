@@ -78,21 +78,25 @@
                    class="header-widget" title="My Account"><img src="~/images/user.png" alt="user"><span>join</span></a>
             }
 
-            <form class="header-form">
-                <input type="text" placeholder="Search anything..."><button>
+            <form class="header-form" asp-controller="Shop" asp-action="Search">
+                <input type="text" placeholder="Search anything...">
+                <button type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
             <div class="header-widget-group">
                 <a href="compare.html" class="header-widget" title="Compare List">
                     <i class="fas fa-random"></i><sup>0</sup>
-                </a><a href="wishlist.html" class="header-widget"
-                       title="Wishlist"><i class="fas fa-heart"></i><sup>0</sup></a><button class="header-widget header-cart" title="Cartlist">
-                    <i class="fas fa-shopping-basket"></i><sup>9+</sup><span>
-                        total
-                        price<small>$345.00</small>
+                </a>
+
+                <a asp-controller="Wishlist" asp-action="Index" class="header-widget"
+                       title="Wishlist"><i class="fas fa-heart"></i><sup class="wishlist-count">@Model.WishList</sup>
+                </a>
+                       
+                <a asp-controller="Cart" asp-action="Index" class="header-widget header-cart" title="Cartlist">
+                    <i class="fas fa-shopping-basket"></i><sup class="basket-count">@Model.BasketCount</sup><span>                       
                     </span>
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -109,12 +113,12 @@
                         </li>
                         <li class="navbar-item dropdown-megamenu">
                             <a class="navbar-link "
-                               href="#">shop</a>
+                               asp-controller="Shop" asp-action="Index">shop</a>
 
                         </li>
                         <li class="navbar-item dropdown-megamenu">
                             <a class="navbar-link dropdown-arrow"
-                               href="#">category</a>
+                              asp-controller="Shop" asp-action="Index">category</a>
                             <div class="megamenu">
                                 <div class="container megamenu-scroll">
                                     <div class="row row-cols-5">
@@ -252,7 +256,7 @@
 
                         </li>
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link " href="#">blogs</a>
+                            <a class="navbar-link " asp-controller="Blog" asp-action="Index">blogs</a>
 
                         </li>
                     </ul>
@@ -401,146 +405,6 @@
     </ul>
     <div class="category-footer">
         <p>All Rights Reserved by <a href="#">Mironcoder</a></p>
-    </div>
-</aside>
-<aside class="cart-sidebar">
-    <div class="cart-header">
-        <div class="cart-total"><i class="fas fa-shopping-basket"></i><span>total item (5)</span></div><button class="cart-close">
-            <i class="icofont-close"></i>
-        </button>
-    </div>
-    <ul class="cart-list">
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="~/images/product/01.jpg" alt="product"></a><button class="cart-delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.html">existing product name</a></h6>
-                    <p>Unit Price - $8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                            <i class="icofont-minus"></i>
-                        </button><input class="action-input"
-                                        title="Quantity Number" type="text" name="quantity" value="1"><button class="action-plus" title="Quantity Plus">
-                            <i class="icofont-plus"></i>
-                        </button>
-                    </div>
-                    <h6>$56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="~/images/product/02.jpg" alt="product"></a><button class="cart-delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.html">existing product name</a></h6>
-                    <p>Unit Price - $8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                            <i class="icofont-minus"></i>
-                        </button><input class="action-input"
-                                        title="Quantity Number" type="text" name="quantity" value="1"><button class="action-plus" title="Quantity Plus">
-                            <i class="icofont-plus"></i>
-                        </button>
-                    </div>
-                    <h6>$56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="~/images/product/03.jpg" alt="product"></a><button class="cart-delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.html">existing product name</a></h6>
-                    <p>Unit Price - $8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                            <i class="icofont-minus"></i>
-                        </button><input class="action-input"
-                                        title="Quantity Number" type="text" name="quantity" value="1"><button class="action-plus" title="Quantity Plus">
-                            <i class="icofont-plus"></i>
-                        </button>
-                    </div>
-                    <h6>$56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="~/images/product/04.jpg" alt="product"></a><button class="cart-delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.html">existing product name</a></h6>
-                    <p>Unit Price - $8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                            <i class="icofont-minus"></i>
-                        </button><input class="action-input"
-                                        title="Quantity Number" type="text" name="quantity" value="1"><button class="action-plus" title="Quantity Plus">
-                            <i class="icofont-plus"></i>
-                        </button>
-                    </div>
-                    <h6>$56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="~/images/product/05.jpg" alt="product"></a><button class="cart-delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.html">existing product name</a></h6>
-                    <p>Unit Price - $8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                            <i class="icofont-minus"></i>
-                        </button><input class="action-input"
-                                        title="Quantity Number" type="text" name="quantity" value="1"><button class="action-plus" title="Quantity Plus">
-                            <i class="icofont-plus"></i>
-                        </button>
-                    </div>
-                    <h6>$56.98</h6>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <div class="cart-footer">
-        <button class="coupon-btn">Do you have a coupon code?</button>
-        <form class="coupon-form">
-            <input type="text" placeholder="Enter your coupon code"><button type="submit">
-                <span>apply</span>
-            </button>
-        </form><a class="cart-checkout-btn"
-                  href="checkout.html">
-            <span class="checkout-label">Proceed to Checkout</span><span class="checkout-price">$369.78</span>
-        </a>
     </div>
 </aside>
 <aside class="nav-sidebar">

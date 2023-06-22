@@ -13,7 +13,11 @@ namespace Greeny.Services.Interface
         Task<List<Product>> GetAllDatasAsync();
         Task<int> GetCountAsync();
         Task<List<Product>> GetPaginatedDatasAsync(int page, int take);
-         List<ShopVM> GetMappedDatas(List<Product> products);
+        List<ProductVM> GetMappedDatas(List<Product> products);
+        Task<List<Product>> GetAllBySearchText(string searchText);
+        Task<Product> GetByIdAsnyc(int? id);
+        Task<Product> GetByIdWithImageAsnyc(int? id);
+
 
 
 
