@@ -1,0 +1,21 @@
+﻿@model CategoryEditVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container my-5">
+    <div class="slider-image">
+        <img src="~/images/suggest/@Model.Image" style="width:300px; height:200px" />
+    </div>
+    <form method="post" asp-action="Edit" enctype="multipart/form-data">
+        <input asp-for="NewImage" class="form-control mt-3" style="width:300px;" />
+        <span asp-validation-for="NewImage" class="text-danger d-block"></span>
+
+         <input asp-for="Name" class="form-control mt-3" maxlength="" />
+        <span class="text-danger d-block" asp-validation-for="Name"></span>
+       
+        <button type="submit" class="btn btn-inverse-primary btn-fw mt-3">Submit</button>
+        <a asp-action="Index" class="btn btn-outline-info btn-fw mt-3">Back</a>
+    </form>
+</div>
+

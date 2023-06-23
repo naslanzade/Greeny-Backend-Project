@@ -1,0 +1,15 @@
+﻿@model CountryCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <form method="post" asp-action="Create">
+        <textarea class="form-control" asp-for="Name" id="category-name"></textarea>
+        <span class="text-danger d-block" asp-validation-for="Name"></span>
+        <button type="submit" class="btn btn-inverse-primary btn-fw mt-3">Submit</button>
+        <a asp-action="Index" class="btn btn-outline-info btn-fw mt-3">Back</a>
+    </form>
+
+</div>
+
