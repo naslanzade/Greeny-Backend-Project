@@ -33,7 +33,7 @@ namespace Greeny.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int page=1)
         {
             var settingDatas = _settingService.GetAll();
-            int take = int.Parse(settingDatas["BrandPagination"]);
+            int take = int.Parse(settingDatas["AdminBrandPagination"]);
 
             var paginatedDatas = await _brandService.PaginatedDatasAsync(page, take);
 

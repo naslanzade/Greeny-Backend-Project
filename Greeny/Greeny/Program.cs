@@ -63,6 +63,10 @@ builder.Services.AddScoped<IWishlistService, WishlistService>();
 builder.Services.AddScoped<IBlogService,BlogService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<IDiscountService, DiscountService>();
+builder.Services.AddScoped<IPositionService, PositionService>();
+builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 
 
 

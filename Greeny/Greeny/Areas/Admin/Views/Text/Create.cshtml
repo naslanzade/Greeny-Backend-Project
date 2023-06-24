@@ -1,0 +1,20 @@
+﻿@model TextCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <form method="post" asp-action="Create">
+        <p><b>Title</b></p>
+        <input class="form-control" asp-for="Title" id="category-name" />
+        <span class="text-danger d-block" asp-validation-for="Title"></span>
+        <br/>
+        <p><b>Description</b></p>
+        <textarea class="form-control" asp-for="Description" id="category-name"></textarea>
+        <span class="text-danger d-block" asp-validation-for="Description"></span>
+        <button type="submit" class="btn btn-inverse-primary btn-fw mt-3">Submit</button>
+        <a asp-action="Index" class="btn btn-outline-info btn-fw mt-3">Back</a>
+    </form>
+
+</div>
+

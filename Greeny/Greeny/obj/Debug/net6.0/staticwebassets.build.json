@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3VY2UCAP+87sSjEAMLATekn1+CUcuJiuxV1MB18RcQA=",
+  "Hash": "GL/RlhL9c4oNffv8XGoTKQ7dAcnkwV2M1nIVwMmhkzA=",
   "Source": "Greeny",
   "BasePath": "_content/Greeny",
   "Mode": "Default",
@@ -31722,12 +31722,12 @@
       "OriginalItemSpec": "wwwroot\\images\\home\\index\\32.png"
     },
     {
-      "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\home\\index\\33.png",
+      "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\home\\index\\be71d820-51c2-4d35-aea4-5794b0449b14_03.jpg",
       "SourceId": "Greeny",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\",
       "BasePath": "_content/Greeny",
-      "RelativePath": "images/home/index/33.png",
+      "RelativePath": "images/home/index/be71d820-51c2-4d35-aea4-5794b0449b14_03.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31736,7 +31736,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\home\\index\\33.png"
+      "OriginalItemSpec": "wwwroot\\images\\home\\index\\be71d820-51c2-4d35-aea4-5794b0449b14_03.jpg"
     },
     {
       "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\logo.png",
@@ -33437,6 +33437,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\suggest\\804a9002-1432-40ca-9d41-9eaad80c9550_03.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\suggest\\fc21d23e-1653-4c82-9d26-597bf09a13f9_01.jpg",
+      "SourceId": "Greeny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\",
+      "BasePath": "_content/Greeny",
+      "RelativePath": "images/suggest/fc21d23e-1653-4c82-9d26-597bf09a13f9_01.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\suggest\\fc21d23e-1653-4c82-9d26-597bf09a13f9_01.jpg"
     },
     {
       "Identity": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\team\\01.jpg",
