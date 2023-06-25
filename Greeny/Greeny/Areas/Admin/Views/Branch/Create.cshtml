@@ -1,0 +1,29 @@
+﻿@model BranchCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <form method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group mt-3">
+            <input asp-for="Images" class="form-control" />
+            <span asp-validation-for="Images" class="text-danger d-block"></span>
+            <br/>
+            <p><b>City</b></p>
+            <input asp-for="City" class="form-control" placeholder="City" />
+            <span asp-validation-for="City" class="text-danger d-block"></span>
+            <br />
+            <p><b>Address</b></p>
+            <input asp-for="Address" class="form-control" placeholder="Address" />
+            <span asp-validation-for="Address" class="text-danger d-block"></span>
+                   
+        </div>
+        <p><b>Select Country</b></p>
+        <div class="form-group mt-3">
+            <select asp-for="CountryId" class="form-control" asp-items="ViewBag.countries"></select>
+        </div>
+        <button type="submit" class="btn btn-success btn-rounded btn-fw mt-3">Submit</button>
+        <a asp-action="Index" class="btn btn-primary btn-rounded btn-fw mt-3">Back</a>
+    </form>
+</div>
+

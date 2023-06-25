@@ -1,0 +1,61 @@
+﻿@model BlogDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Team Detail Table</h4>
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Author
+                            </th>
+                            <th>
+                                Create Date
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/blog/@Model.Image" alt="image" style="width:100px;height:75px; border-radius:0%" />
+                            </td>
+                            <td>
+                                @Model.Title
+                            </td>
+                            <td>
+                                @Model.Description
+                            </td>
+                            <td>
+                                @Model.AuthorName
+                            </td>
+                            <td>
+                                @Model.CreatedDate
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br></br>
+            <a asp-action="Index" class="btn btn-outline-info btn-fw">Back</a>
+        </div>
+    </div>
+
+</div>
+

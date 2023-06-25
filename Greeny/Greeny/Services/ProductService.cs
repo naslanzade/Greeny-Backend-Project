@@ -120,8 +120,7 @@ namespace Greeny.Services
 
         public async Task<List<Product>> GetAllBySearchText(string searchText)
         {
-            var products = await _context.Products.Include(p => p.Images)
-                                                  .OrderByDescending(p => p.Id)
+            var products = await _context.Products.Include(p => p.Images)                                                  
                                                   .Where(p => p.Name.ToLower().Contains(searchText.ToLower()))
                                                   .ToListAsync();
             return products;

@@ -1,0 +1,64 @@
+﻿@model BranchDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Branch Detail Table</h4>
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+                            <th>
+                                City
+                            </th>
+                            <th>
+                                Country
+                            </th>
+                            <th>
+                                Address
+                            </th>
+
+                            <th>
+                                Create Date
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/branch/@Model.Image" alt="image" style="width:100px;height:75px; border-radius:0%" />
+                            </td>
+
+                            <td>
+                                @Model.City
+                            </td>
+                            <td>
+                                @Model.CountyName
+                            </td>
+                            <td>
+                                @Model.Address
+                            </td>
+
+                            <td>
+                                @Model.CreatedDate
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br></br>
+            <a asp-action="Index" class="btn btn-outline-info btn-fw">Back</a>
+        </div>
+    </div>
+
+</div>
+

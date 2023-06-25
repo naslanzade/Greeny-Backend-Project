@@ -7285,12 +7285,20 @@
       "PackagePath": "staticwebassets\\images\\blog\\08.jpg"
     },
     {
-      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\01.jpg",
-      "PackagePath": "staticwebassets\\images\\branch\\01.jpg"
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\blog\\3252cbd0-af73-4185-907d-630e8fff731c_01.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\3252cbd0-af73-4185-907d-630e8fff731c_01.jpg"
     },
     {
-      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\02.jpg",
-      "PackagePath": "staticwebassets\\images\\branch\\02.jpg"
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\blog\\8c1c0393-2ebb-43c7-b10a-7b2a3526cf49_01.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\8c1c0393-2ebb-43c7-b10a-7b2a3526cf49_01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\blog\\8d3de682-84b8-49d8-871c-9f4d8f09ed0b_02.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\8d3de682-84b8-49d8-871c-9f4d8f09ed0b_02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\01.jpg"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\03.jpg",
@@ -7299,6 +7307,10 @@
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\04.jpg",
       "PackagePath": "staticwebassets\\images\\branch\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\branch\\4884d2ef-13f1-4f94-8bf4-a5825e7c4b4b_01.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\4884d2ef-13f1-4f94-8bf4-a5825e7c4b4b_01.jpg"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\brand\\01.jpg",
@@ -7873,16 +7885,16 @@
       "PackagePath": "staticwebassets\\images\\team\\02.jpg"
     },
     {
-      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\team\\03.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\03.jpg"
-    },
-    {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\team\\04.jpg",
       "PackagePath": "staticwebassets\\images\\team\\04.jpg"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\team\\05.jpg",
       "PackagePath": "staticwebassets\\images\\team\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\team\\e27ccb35-00c5-4544-97f9-daf110756adf_04.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\e27ccb35-00c5-4544-97f9-daf110756adf_04.jpg"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\testimonial-shape.png",

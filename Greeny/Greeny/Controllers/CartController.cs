@@ -32,10 +32,7 @@ namespace Greeny.Controllers
 
         public async Task<IActionResult> Index()
         {
-            AppUser user = await _userManager.GetUserAsync(User);
-
-            if (user == null) return RedirectToAction("SignIn", "Account");
-
+           
             List<BasketDetailVM> basketList = new();
 
             if (_accessor.HttpContext.Request.Cookies["basket"] != null)
@@ -80,10 +77,7 @@ namespace Greeny.Controllers
 
         [HttpPost]
         public async Task<IActionResult> AddBasket(int? id)
-        {
-            var user = await _userManager.GetUserAsync(User);
-
-            if (user == null) return RedirectToAction("SignIn", "Account");
+        {        
 
             if (id is null) return BadRequest();
 

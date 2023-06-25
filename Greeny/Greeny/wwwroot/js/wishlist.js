@@ -20,9 +20,7 @@
 
     //delete from basket
     $(document).on("submit", "#basket-delete-form", function (e) {
-
-        console.log("ss");
-        e.preventDefault();
+        e.preventDefault();       
         let productId = $(this).attr("data-id");
 
         $(this).parent().parent().remove();

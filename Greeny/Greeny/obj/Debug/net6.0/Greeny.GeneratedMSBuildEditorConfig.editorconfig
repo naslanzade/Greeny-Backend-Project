@@ -80,6 +80,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmdJbWFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Blog/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Blog/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Blog/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Branch/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Branch/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Branch/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Branch/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -230,6 +262,38 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Tag/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Team/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Team/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Team/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Team/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Testimonial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdGltb25pYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Testimonial/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdGltb25pYWxcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Testimonial/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdGltb25pYWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Testimonial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdGltb25pYWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/novra/OneDrive/Desktop/Greeny-Backend/Greeny/Greeny/Areas/Admin/Views/Text/Create.cshtml]

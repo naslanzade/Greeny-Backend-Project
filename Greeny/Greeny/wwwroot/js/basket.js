@@ -4,6 +4,7 @@
     //add basket
     $(document).on("submit", "#basket-form", function (e) {
         e.preventDefault();
+        console.log("ss");
         let productId = $(this).attr("data-id");
         let data = { id: productId };
 
@@ -19,7 +20,7 @@
 
 
     //delete from basket
-    $(document).on("submit", "#basket-delete", function (e) {
+    $(document).on("submit", "#basket-delete-form", function (e) {
         e.preventDefault();
         let productId = $(this).attr("data-id");
 
@@ -41,6 +42,10 @@
 
             }
         })
+
+
+
+
     })
 
 

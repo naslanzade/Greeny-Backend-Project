@@ -26,9 +26,6 @@ namespace Greeny.Controllers
             _settingService = settingService;
 
         }
-
-
-
         public async Task<IActionResult> Index(int page=1)
         {
             var settingDatas = _settingService.GetAll();
@@ -49,9 +46,6 @@ namespace Greeny.Controllers
 
             return View(result);
         }
-
-
-
         private async Task<int> GetCountAsync(int take)
         {
             int count = await _blogService.GetCountAsync();
@@ -60,5 +54,8 @@ namespace Greeny.Controllers
             return (int)result;
 
         }
+
+       
+
     }
 }
