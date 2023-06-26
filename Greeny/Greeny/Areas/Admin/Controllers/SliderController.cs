@@ -2,9 +2,11 @@
 using Greeny.Areas.Admin.ViewModels.Brand;
 using Greeny.Areas.Admin.ViewModels.Slider;
 using Greeny.Data;
+using Greeny.Helpers;
 using Greeny.Models;
 using Greeny.Services;
 using Greeny.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +30,8 @@ namespace Greeny.Areas.Admin.Controllers
             _env = env;
             
         }
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _sliderService.MappedDatas());
@@ -35,6 +39,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -47,6 +52,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
 
@@ -56,6 +62,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(SliderCreateVM request)
         {
             foreach (var item in request.Images)
@@ -81,7 +88,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
-
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
@@ -102,7 +109,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, SliderEditVM request)
         {
             if (id is null) return BadRequest();
@@ -144,6 +151,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _sliderService.DeleteAsync(id);

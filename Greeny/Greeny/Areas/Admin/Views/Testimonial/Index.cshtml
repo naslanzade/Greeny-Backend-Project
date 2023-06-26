@@ -34,9 +34,23 @@
                                             </td>
                                             <td>
                                                 <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-inverse-primary btn-fw">Detail</a>
-                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-inverse-warning btn-fw">Edit</a>
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                                                    {
+                                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-inverse-warning btn-fw">Edit</a>
+                                                    }
+                                                }
+
                                                 <form method="post" asp-action="Delete" asp-route-id="@item.Id" style="display:inline-block">
-                                                    <button type="submit" class="btn btn-inverse-danger btn-fw">Delete</button>
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                        if (User.IsInRole("SuperAdmin"))
+                                                        {
+                                                            <button type="submit" class="btn btn-inverse-danger btn-fw">Delete</button>
+                                                        }
+                                                    }
+
                                                 </form>
                                             </td>
                                         </tr>
@@ -48,7 +62,13 @@
                 </div>
             </div>
         </div>
-        <a asp-action="Create" class="btn btn-inverse-success btn-fw">Create</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            if (User.IsInRole("SuperAdmin"))
+            {
+                <a asp-action="Create" class="btn btn-inverse-success btn-fw">Create</a>
+            }
+        }
     </div>
 
     <!-- content-wrapper ends -->

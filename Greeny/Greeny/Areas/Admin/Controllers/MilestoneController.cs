@@ -1,9 +1,11 @@
 ﻿using Greeny.Areas.Admin.ViewModels.Discount;
 using Greeny.Areas.Admin.ViewModels.Milestone;
 using Greeny.Data;
+using Greeny.Helpers;
 using Greeny.Models;
 using Greeny.Services;
 using Greeny.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,6 +24,8 @@ namespace Greeny.Areas.Admin.Controllers
             _context = context;
             _milestoneService = milestoneService;
         }
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _milestoneService.GetAllMappedDatas());
@@ -29,6 +33,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -43,6 +48,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
             return View();
@@ -51,6 +57,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(MilestoneCreateVM request)
         {
             if (!ModelState.IsValid)
@@ -66,6 +73,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _milestoneService.DeleteAsync(id);
@@ -75,6 +83,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
@@ -94,6 +103,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, MilestoneEditVM request)
         {
             if (id is null) return BadRequest();

@@ -7597,10 +7597,6 @@
       "PackagePath": "staticwebassets\\images\\product\\11.jpg"
     },
     {
-      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\12.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\12.jpg"
-    },
-    {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\13.jpg",
       "PackagePath": "staticwebassets\\images\\product\\13.jpg"
     },
@@ -7633,6 +7629,10 @@
       "PackagePath": "staticwebassets\\images\\product\\20.jpg"
     },
     {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\20eafdda-e950-4541-9f5c-ba7a4b460c53_9dbd822a-d4ac-4235-a492-b3f1eb95f596_shop16.jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\20eafdda-e950-4541-9f5c-ba7a4b460c53_9dbd822a-d4ac-4235-a492-b3f1eb95f596_shop16.jpeg"
+    },
+    {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\21.jpg",
       "PackagePath": "staticwebassets\\images\\product\\21.jpg"
     },
@@ -7651,6 +7651,18 @@
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\25.jpg",
       "PackagePath": "staticwebassets\\images\\product\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\3565d40a-0c7d-4172-8d75-7cf91ab7e572_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\3565d40a-0c7d-4172-8d75-7cf91ab7e572_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\6b98160f-46ad-46fa-bb12-016af640b0f2_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\6b98160f-46ad-46fa-bb12-016af640b0f2_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\ace67d78-71f7-4136-9303-94d1b3ed0aa2_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\ace67d78-71f7-4136-9303-94d1b3ed0aa2_3c72fb1d-1440-4576-a565-3205f56f3069_shop-14-img.jpg"
     },
     {
       "Id": "C:\\Users\\novra\\OneDrive\\Desktop\\Greeny-Backend\\Greeny\\Greeny\\wwwroot\\images\\product\\apple.jpeg",

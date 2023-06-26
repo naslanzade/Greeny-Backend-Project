@@ -26,13 +26,24 @@
                                                 <img src="~/images/promo/@item.Image" alt="image" style="width:150px; height:75px; border-radius:0%" />
                                             </td>                                          
                                             <td>
-                                                <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-inverse-primary btn-fw">Detail</a>                                              
-                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-inverse-warning btn-fw">Edit</a>
-                                                    
-                                                
+                                                <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-inverse-primary btn-fw">Detail</a>
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                                                    {
+                                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-inverse-warning btn-fw">Edit</a>
+                                                    }
+                                                }
 
-                                                <form method="post" asp-action="Delete" asp-route-id="@item.Id" style="display:inline-block">                                                
-                                                   <button type="submit" class="btn btn-inverse-danger btn-fw">Delete</button>
+                                                <form method="post" asp-action="Delete" asp-route-id="@item.Id" style="display:inline-block">
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                        if (User.IsInRole("SuperAdmin"))
+                                                        {
+                                                            <button type="submit" class="btn btn-inverse-danger btn-fw">Delete</button>
+                                                        }
+                                                    }
+
                                                 </form>
                                             </td>
                                         </tr>
@@ -47,9 +58,13 @@
 
 
         </div>
-
-    
+        @if (User.Identity.IsAuthenticated)
+        {
+            if (User.IsInRole("SuperAdmin"))
+            {
                 <a asp-action="Create" class="btn btn-inverse-success btn-fw">Create</a>
+            }
+        }
        
     </div>
 

@@ -2,8 +2,10 @@
 using Greeny.Areas.Admin.ViewModels.Team;
 using Greeny.Areas.Admin.ViewModels.Testimonial;
 using Greeny.Data;
+using Greeny.Helpers;
 using Greeny.Models;
 using Greeny.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -31,13 +33,14 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
-
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _teamService.GetMappedDatas());
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -63,6 +66,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             await GetPosition();
@@ -72,6 +76,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(TestimonialCreateVM request)
         {
             await GetPosition();
@@ -103,6 +108,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             await GetPosition();
@@ -126,6 +132,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, TestimonialEditVM request)
         {
             if (id is null) return BadRequest();
@@ -167,6 +174,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             var team = await _teamService.GetWithIncludes(id);

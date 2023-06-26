@@ -30,12 +30,15 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _aboutImageService.GetAllMappedDatas());
         }
 
         [HttpGet]
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int ? id)
         {
             if (id is null) return BadRequest();
@@ -48,7 +51,9 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]       
+        [HttpGet]
+
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
 
@@ -57,7 +62,9 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]       
+        [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(AboutImageCreateVM request)
         {
             if (!ModelState.IsValid)
@@ -90,7 +97,9 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]       
+        [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
 
@@ -100,7 +109,9 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]       
+        [HttpGet]
+
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
@@ -119,6 +130,8 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, AboutEditVM request)
         {
             if (id is null) return BadRequest();

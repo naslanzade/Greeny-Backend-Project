@@ -1,0 +1,133 @@
+﻿@using Fiorello.Helpers;
+@model Paginate<ProductVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Product Table</h4>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("SuperAdmin"))
+                            {
+                                <a asp-action="Create" class="btn btn-inverse-success btn-fw">Create</a>
+                            }
+                        }
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Image</th>
+                                        <th>Price</th>
+                                        <th>IsStock</th>
+                                        <th>Sale Count</th>
+                                        <th>Rate Count</th>
+                                        <th>Product Count</th>
+                                        <th>Category</th>
+                                        <th>Brand</th>
+                                        <th>SkuCode</th>                                       
+                                        <th>Option</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Datas)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.Name
+                                            </td>
+                                            <td>
+                                                <img src="~/images/product/@item.Images" alt="image" style="width:100px;height:150px; border-radius:0%" />
+                                            </td>
+                                             <td>
+                                                @item.Price
+                                            </td>
+                                             <td>
+                                                @item.IsStock
+                                            </td>
+                                             <td>
+                                                @item.SaleCount
+                                            </td>
+                                             <td>
+                                                @item.RateCount
+                                            </td>
+                                             <td>
+                                                @item.ProductCount
+                                            </td>
+                                             <td>
+                                                @item.CategoryName
+                                            </td>
+                                             <td>
+                                                @item.BrandName
+                                            </td>
+                                            <td>
+                                                @item.SkuCode
+                                            </td>
+                                            <td>
+                                                <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-inverse-primary btn-fw">Detail</a>
+
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                                                    {
+                                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-inverse-warning btn-fw">Edit</a>
+                                                    }
+                                                }
+
+                                                <form method="post" asp-action="Delete" asp-route-id="@item.Id" style="display:inline-block">
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                        if (User.IsInRole("SuperAdmin"))
+                                                        {
+                                                            <button type="submit" class="btn btn-inverse-danger btn-fw">Delete</button>
+                                                        }
+                                                    }
+
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination d-flex justify-content-center mt-3">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item @(Model.HasPrevious  ? "" : "disabled")">
+                        <a class="page-link" asp-route-page="@(Model.CurrentPage - 1)" tabindex="-1">Previous</a>
+                    </li>
+                    @for (int i = 1; i <= Model.TotalPage; i++)
+                    {
+                        <li class="page-item @(Model.CurrentPage==i ? "disabled" : "")">
+                            <a class="page-link @(Model.CurrentPage==i ? "active-paginate" : "")" asp-route-page="@i">@i</a>
+                        </li>
+                    }
+                    <li class="page-item @(Model.HasNext  ? "" : "disabled")">
+                        <a class="page-link" asp-route-page="@(Model.CurrentPage+1)">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+

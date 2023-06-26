@@ -1,8 +1,10 @@
 ﻿using Fiorello.Helpers;
 using Greeny.Areas.Admin.ViewModels.Branch;
 using Greeny.Data;
+using Greeny.Helpers;
 using Greeny.Models;
 using Greeny.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -32,6 +34,7 @@ namespace Greeny.Areas.Admin.Controllers
             _countryService = countryService;
         }
 
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _branchService.GetMappedDatas());
@@ -39,6 +42,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -67,6 +71,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             await GetCountry();
@@ -76,6 +81,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(BranchCreateVM request)
         {
             await GetCountry();
@@ -107,6 +113,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             await GetCountry();
@@ -131,6 +138,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, BranchEditVM request)
         {
             if (id is null) return BadRequest();
@@ -172,6 +180,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             var barnch = await _branchService.GetWithIncludes(id);

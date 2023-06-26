@@ -34,7 +34,8 @@ namespace Greeny.Areas.Admin.Controllers
             _categoryService = categoryService;
         }
 
-        
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index(int page=1)
         {
             var settingDatas = _settingService.GetAll();
@@ -65,7 +66,8 @@ namespace Greeny.Areas.Admin.Controllers
 
         }
 
-        [HttpGet]        
+        [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -92,7 +94,8 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]       
+        [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             await GetCategory();
@@ -101,7 +104,8 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]       
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(SubCategoryCreateVM request)
         {
             await GetCategory();
@@ -117,7 +121,8 @@ namespace Greeny.Areas.Admin.Controllers
 
 
 
-        [HttpGet]       
+        [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             await GetCategory();
@@ -140,7 +145,8 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]      
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int ? id, SubCategoryEditVM request)
         {
             await GetCategory();
@@ -167,6 +173,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             var subCategory = await _subCategoryService.GetWithIncludes(id);

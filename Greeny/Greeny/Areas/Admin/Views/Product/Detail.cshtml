@@ -1,0 +1,118 @@
+﻿@model ProductDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Product Detail Table</h4>
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                IsStock
+                            </th>
+                            <th>
+                                Sale Count
+                            </th>
+                             <th>
+                                Product Count
+                            </th>
+                             <th>
+                                Rate Count
+                            </th>
+                             <th>
+                                Category
+                            </th>
+                            <th>
+                                SubCategory
+                            </th>
+                            <th>
+                                Brand
+                            </th>
+                            <th>
+                                Discount
+                            </th>                        
+                            <th>
+                                SkuCode
+                            </th>
+                            <th>
+                                Tag Name
+                            </th>
+                            <th>
+                                Create Date
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                @foreach (var item in Model.Images)
+                                {
+                                    <img src="~/images/product/@item" alt="image" style="with:100px;height:50px; border-radius:0%" />
+                                }
+                            </td>
+                            <td>
+                                @Model.Name
+                            </td>
+                            <td>
+                                @Model.Price
+                            </td>
+                            <td>
+                                @Model.IsStock
+                            </td>
+                            <td>
+                                @Model.SaleCount
+                            </td>
+                            <td>
+                                @Model.ProductCount
+                            </td>
+                            <td>
+                                @Model.RateCount
+                            </td>
+                            <td>
+                                @Model.CategoryName
+                            </td>
+                            <td>
+                                @Model.SubCategoryName
+                            </td>
+                            <td>
+                                @Model.BrandName
+                            </td>
+                            <td>
+                                @Model.DiscountName
+                            </td>
+                            <td>
+                                @Model.SkuCode
+                            </td>
+                            <td>
+                                @Model.TagName
+                            </td>
+                            <td>
+                                @Model.CreatedDate
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br></br>
+            <a asp-action="Index" class="btn btn-outline-info btn-fw">Back</a>
+        </div>
+    </div>
+
+</div>
+

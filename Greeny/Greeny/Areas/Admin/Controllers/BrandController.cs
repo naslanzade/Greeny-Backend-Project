@@ -30,6 +30,8 @@ namespace Greeny.Areas.Admin.Controllers
             _env = env;
             _settingService = settingService;
         }
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index(int page=1)
         {
             var settingDatas = _settingService.GetAll();
@@ -64,6 +66,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id is null) return BadRequest();
@@ -75,7 +78,8 @@ namespace Greeny.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]       
+        [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
 
@@ -84,7 +88,8 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]       
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(BrandCreateVM request)
         {
             foreach (var item in request.Images)
@@ -110,7 +115,8 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]      
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _brandService.DeleteAsync(id);
@@ -121,7 +127,7 @@ namespace Greeny.Areas.Admin.Controllers
 
 
         [HttpGet]
-       
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
@@ -141,7 +147,7 @@ namespace Greeny.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-       
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Edit(int? id, BrandEditVM request)
         {
             if (id is null) return BadRequest();
